@@ -2,7 +2,7 @@
 
 The Smart Environment Monitor demonstrates how to build a simple IoT system using an ESP32 microcontroller that monitors ambient temperature and humidity and provides real-time feedback to the user. The system reads data from a DHT11 sensor, processes it, and displays the results on a 0.96" OLED screen.
 
-Based on predefined temperature thresholds, the system activates an audible alert using a buzzer when the environment becomes too warm. Additionally, a push button allows the user to temporarily mute the buzzer for 10 seconds, improving usability and preventing continuous noise.
+Based on predefined temperature thresholds, the system activates an audible alert using a buzzer when the environment becomes too warm. Additionally, a push button allows the user to temporarily mute the buzzer for 10 seconds, improving usability and preventing continuous alerts.
 
 This project highlights how embedded systems can integrate sensors, user interaction, and real-time feedback into a compact and efficient monitoring solution.
 
@@ -28,23 +28,50 @@ This project highlights how embedded systems can integrate sensors, user interac
 
 ## 📦 Pre-requisites
 
-### Hardware
-- ESP32 development board  
-- DHT11 temperature and humidity sensor  
-- 0.96" OLED display (SSD1306, I2C)  
-- Active buzzer  
-- Push button (4-pin tactile switch)  
-- Breadboard  
-- Jumper wires  
+### Hardware Components
 
-### Software
-- Arduino IDE  
-- ESP32 Board Package (Espressif Systems)  
-- Required libraries:
-  - Adafruit GFX  
-  - Adafruit SSD1306  
-  - DHT sensor library (Adafruit)  
-  - Adafruit Unified Sensor  
+- **ESP32 Development Board (ESP32-WROOM-32)**  
+  https://www.espressif.com/en/products/socs/esp32
+
+- **DHT11 Temperature and Humidity Sensor Module**  
+  https://components101.com/sensors/dht11-temperature-sensor
+
+- **0.96" OLED Display SSD1306 (I2C, 128x64)**  
+  https://components101.com/displays/oled-display-ssd1306
+
+- **Active Buzzer Module (3.3V/5V compatible)**  
+  https://components101.com/modules/buzzer-module
+
+- **Tactile Push Button (4-pin switch)**  
+  https://components101.com/switches/push-button
+
+- **Breadboard (830 tie-points)**  
+  https://components101.com/breadboards
+
+- **Jumper Wires (Male-Male / Male-Female)**  
+  https://components101.com/wires/jumper-wires
+
+---
+
+### Software Components
+
+- **Arduino IDE**  
+  https://www.arduino.cc/en/software
+
+- **ESP32 Board Package (Espressif Systems)**  
+  https://github.com/espressif/arduino-esp32
+
+- **Adafruit GFX Library**  
+  https://github.com/adafruit/Adafruit-GFX-Library
+
+- **Adafruit SSD1306 Library**  
+  https://github.com/adafruit/Adafruit_SSD1306
+
+- **DHT Sensor Library (Adafruit)**  
+  https://github.com/adafruit/DHT-sensor-library
+
+- **Adafruit Unified Sensor Library**  
+  https://github.com/adafruit/Adafruit_Sensor
 
 ---
 
@@ -55,4 +82,115 @@ To set up the project, follow the steps below:
 ### 1. Install ESP32 Support
 - Open Arduino IDE  
 - Go to **File → Preferences**  
-- Add the following URL to *Additional Board Manager URLs*:
+- Add the following URL: https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32_index.json
+- Go to **Tools → Board → Boards Manager**  
+- Install **ESP32 by Espressif Systems**
+
+---
+
+### 2. Install Required Libraries
+- Open **Library Manager**
+- Install:
+- Adafruit GFX  
+- Adafruit SSD1306  
+- DHT sensor library  
+- Adafruit Unified Sensor  
+
+---
+
+### 3. Hardware Connections
+
+- **DHT11**
+- VCC → 3.3V  
+- GND → GND  
+- DATA → GPIO 2  
+
+- **OLED Display**
+- VCC → 3.3V  
+- GND → GND  
+- SDA → GPIO 21  
+- SCL → GPIO 22  
+
+- **Buzzer**
+- VCC → 3.3V  
+- GND → GND  
+- SIG → GPIO 23  
+
+- **Push Button**
+- One pin → GND  
+- Opposite (diagonal) pin → GPIO 5  
+
+---
+
+### 4. Upload the Code
+- Select **ESP32 Dev Module**  
+- Select the correct COM port  
+- Click **Upload**  
+- If needed, press the **BOOT** button  
+
+---
+
+## ▶️ Running
+
+To run the system, follow these steps:
+
+1. Connect the ESP32 to your computer using a USB cable.
+
+2. Open the Arduino IDE and ensure the correct board and port are selected:
+ - Board: **ESP32 Dev Module**
+ - Port: (your COM port)
+
+3. Upload the code to the ESP32.
+
+4. After upload, the system starts automatically.
+
+5. Observe the OLED display:
+ - A progress bar shows the temperature level
+ - A message is displayed:
+   - **FRIG**
+   - **OK**
+   - **CALD**
+
+6. Monitor the buzzer:
+ - Activates when temperature > 26°C
+ - Stops automatically otherwise
+
+7. Press the push button:
+ - The buzzer is muted for 10 seconds
+ - The display shows **"MUTED"**
+
+8. (Optional) Open Serial Monitor:
+ - Baud rate: **115200**
+ - View live sensor values
+
+---
+
+## 📊 Project Features
+
+- Real-time temperature and humidity monitoring  
+- OLED graphical interface (bar + status text)  
+- Threshold-based alert system  
+- User interaction via button  
+- Non-blocking logic using `millis()`  
+
+---
+
+## 🎯 Project Results
+
+The system successfully demonstrates:
+- Integration of multiple hardware components  
+- Real-time sensor data processing  
+- Interactive control via user input  
+- Efficient embedded system design  
+
+---
+
+
+---
+
+## 🚀 Future Improvements
+
+- Mobile app integration (IoT Cloud / Blynk)  
+- RGB LED indicators  
+- Cloud data logging  
+- Use of a more accurate sensor (DHT22)  
