@@ -10,7 +10,9 @@ This project highlights how embedded systems can integrate sensors, user interac
 
 ## 📸 Screenshots
 
-*(Add images of your hardware setup and OLED display output here)*
+<img width="1600" height="796" alt="Schematics" src="https://github.com/user-attachments/assets/52099aaf-dee7-4bad-b768-69abeca72877" />
+
+
 
 ---
 
@@ -100,25 +102,23 @@ To set up the project, follow the steps below:
 
 ### 3. Hardware Connections
 
-- **DHT11**
-- VCC → 3.3V  
-- GND → GND  
-- DATA → GPIO 2  
-
-- **OLED Display**
-- VCC → 3.3V  
-- GND → GND  
-- SDA → GPIO 21  
-- SCL → GPIO 22  
-
-- **Buzzer**
-- VCC → 3.3V  
-- GND → GND  
-- SIG → GPIO 23  
-
-- **Push Button**
-- One pin → GND  
-- Opposite (diagonal) pin → GPIO 5  
+ESP32 3.3V → rail +
+ ESP32 GND → rail - 
+🌡️ DHT11 (prin rail)
+ DHT11 VCC → rail + 
+DHT11 GND → rail - 
+DHT11 DATA → GPIO 4 
+🔔 BUZZER (prin rail) 
+Buzzer GND → rail - 
+Buzzer SIG → GPIO 5
+ 🖥️ OLED (direct în ESP32)
+ OLED VCC → ESP32 3.3V 
+OLED GND → ESP32 GND 
+OLED SDA → GPIO 21 
+OLED SCL → GPIO 22
+ 🔘 BUTON (direct în ESP32)
+ Buton pin 1 → ESP32 GND 
+Buton pin diagonal opus → GPIO 23
 
 ---
 
