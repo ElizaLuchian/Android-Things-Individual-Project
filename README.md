@@ -102,23 +102,28 @@ To set up the project, follow the steps below:
 
 ### 3. Hardware Connections
 
-ESP32 3.3V → rail +
- ESP32 GND → rail - 
-🌡️ DHT11 (prin rail)
- DHT11 VCC → rail + 
-DHT11 GND → rail - 
-DHT11 DATA → GPIO 4 
-🔔 BUZZER (prin rail) 
-Buzzer GND → rail - 
-Buzzer SIG → GPIO 5
- 🖥️ OLED (direct în ESP32)
- OLED VCC → ESP32 3.3V 
-OLED GND → ESP32 GND 
-OLED SDA → GPIO 21 
-OLED SCL → GPIO 22
- 🔘 BUTON (direct în ESP32)
- Buton pin 1 → ESP32 GND 
-Buton pin diagonal opus → GPIO 23
+### ⚡ Power Rails
+- ESP32 3.3V -> Breadboard + rail
+- ESP32 GND -> Breadboard - rail
+
+### 🌡️ DHT11 Temperature & Humidity Sensor
+- VCC -> + rail
+- GND -> - rail
+- DATA -> GPIO 4
+
+### 🔔 Buzzer
+- GND -> - rail
+- SIG -> GPIO 5
+
+### 🖥️ OLED Display (I2C)
+- VCC -> ESP32 3.3V
+- GND -> ESP32 GND
+- SDA -> GPIO 21
+- SCL -> GPIO 22
+
+### 🔘 Button
+- Pin 1 -> ESP32 GND
+- Opposite diagonal pin -> GPIO 23
 
 ---
 
