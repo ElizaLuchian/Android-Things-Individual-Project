@@ -10,7 +10,6 @@ This project highlights how embedded systems can integrate sensors, user interac
 
 ## 📸 Screenshots
 
-<img width="1600" height="796" alt="Schematics" src="https://github.com/user-attachments/assets/52099aaf-dee7-4bad-b768-69abeca72877" />
 
 
 
@@ -24,7 +23,8 @@ This project highlights how embedded systems can integrate sensors, user interac
 
 ## 🔌 Schematics
 
-*(Insert your schematic diagram created in Fritzing or CircuitCanvas here)*
+<img width="1600" height="796" alt="Schematics" src="https://github.com/user-attachments/assets/52099aaf-dee7-4bad-b768-69abeca72877" />
+
 
 ---
 
