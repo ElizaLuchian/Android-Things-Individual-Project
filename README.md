@@ -36,44 +36,44 @@ This project highlights how embedded systems can integrate sensors, user interac
   https://www.espressif.com/en/products/socs/esp32
 
 - **DHT11 Temperature and Humidity Sensor Module**  
-  https://components101.com/sensors/dht11-temperature-sensor
-
+  https://arduinogetstarted.com/tutorials/arduino-dht11
+  
 - **0.96" OLED Display SSD1306 (I2C, 128x64)**  
-  https://components101.com/displays/oled-display-ssd1306
-
-- **Active Buzzer Module (3.3V/5V compatible)**  
-  https://components101.com/modules/buzzer-module
+  https://controllerstech.com/arduino-ssd1306-oled-display-tutorial/
+  
+- **Active Buzzer**  
+ https://www.net4web.de/downloads/datasheets/datasheet_active_buzzer_5v_english_190523.pdf
 
 - **Tactile Push Button (4-pin switch)**  
-  https://components101.com/switches/push-button
+  https://docs.arduino.cc/built-in-examples/digital/Button/
 
 - **Breadboard (830 tie-points)**  
-  https://components101.com/breadboards
+  https://busboard.com/BB830T
 
 - **Jumper Wires (Male-Male / Male-Female)**  
-  https://components101.com/wires/jumper-wires
+  https://iotzone.in/blog/jumper-wire-types-uses-pin-configuration-and-complete-guide-for-electronics-projects
 
 ---
 
 ### Software Components
 
 - **Arduino IDE**  
-  https://www.arduino.cc/en/software
+  https://www.arduino.cc/en/software/
 
 - **ESP32 Board Package (Espressif Systems)**  
-  https://github.com/espressif/arduino-esp32
+  https://docs.espressif.com/projects/arduino-esp32/en/latest/installing.html
 
 - **Adafruit GFX Library**  
   https://github.com/adafruit/Adafruit-GFX-Library
 
 - **Adafruit SSD1306 Library**  
-  https://github.com/adafruit/Adafruit_SSD1306
+  https://docs.arduino.cc/libraries/adafruit-ssd1306/
 
 - **DHT Sensor Library (Adafruit)**  
-  https://github.com/adafruit/DHT-sensor-library
+  https://www.arduinolibraries.info/libraries/dht-sensor-library
 
 - **Adafruit Unified Sensor Library**  
-  https://github.com/adafruit/Adafruit_Sensor
+  https://docs.arduino.cc/libraries/adafruit-unified-sensor/
 
 ---
 
