@@ -6,14 +6,6 @@ Based on predefined temperature thresholds, the system activates an audible aler
 
 This project highlights how embedded systems can integrate sensors, user interaction, and real-time feedback into a compact and efficient monitoring solution.
 
----
-
-## 📸 Screenshots
-
-
-
-
----
 
 ## 🎥 Demo
 
@@ -31,8 +23,10 @@ This project highlights how embedded systems can integrate sensors, user interac
 ## 📦 Pre-requisites
 
 ### Hardware Components
+The link for the devkit I bought containing some of my components, the others I borrowed:
+https://www.emag.ro/kit-de-baza-pentru-incepatori-esp32-esp-32s-wifi-potrivit-pentru-invatarea-proiectelor-arduino-set-de-95-de-piese-cu-ambalaj-et000030/pd/DZMDW83BM/?utm_campaign=share_product&utm_source=mobile_dynamic_share&utm_medium=android
 
-- **ESP32 Development Board (ESP32-WROOM-32)**  
+- **ESP32 Development Board (ESP-32S WiFi)**  
   https://www.espressif.com/en/products/socs/esp32
 
 - **DHT11 Temperature and Humidity Sensor Module**  
