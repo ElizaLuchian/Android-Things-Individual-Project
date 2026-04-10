@@ -6,13 +6,6 @@ Based on predefined temperature thresholds, the system activates an audible aler
 
 This project highlights how embedded systems can integrate sensors, user interaction, and real-time feedback into a compact and efficient monitoring solution.
 
----
-
-## 📸 Screenshots
-
-*(Add images of your hardware setup and OLED display output here)*
-
----
 
 ## 🎥 Demo
 
@@ -22,56 +15,59 @@ This project highlights how embedded systems can integrate sensors, user interac
 
 ## 🔌 Schematics
 
-*(Insert your schematic diagram created in Fritzing or CircuitCanvas here)*
+<img width="1600" height="796" alt="Schematics" src="https://github.com/user-attachments/assets/52099aaf-dee7-4bad-b768-69abeca72877" />
+
 
 ---
 
 ## 📦 Pre-requisites
 
 ### Hardware Components
+This is the link to the dev kit I bought, which includes some of my components, while the others were borrowed:
+https://www.emag.ro/kit-de-baza-pentru-incepatori-esp32-esp-32s-wifi-potrivit-pentru-invatarea-proiectelor-arduino-set-de-95-de-piese-cu-ambalaj-et000030/pd/DZMDW83BM/?utm_campaign=share_product&utm_source=mobile_dynamic_share&utm_medium=android
 
-- **ESP32 Development Board (ESP32-WROOM-32)**  
+- **ESP32 Development Board (ESP-32S WiFi)**  
   https://www.espressif.com/en/products/socs/esp32
 
 - **DHT11 Temperature and Humidity Sensor Module**  
-  https://components101.com/sensors/dht11-temperature-sensor
-
+  https://arduinogetstarted.com/tutorials/arduino-dht11
+  
 - **0.96" OLED Display SSD1306 (I2C, 128x64)**  
-  https://components101.com/displays/oled-display-ssd1306
-
-- **Active Buzzer Module (3.3V/5V compatible)**  
-  https://components101.com/modules/buzzer-module
+  https://controllerstech.com/arduino-ssd1306-oled-display-tutorial/
+  
+- **Active Buzzer**  
+ https://www.net4web.de/downloads/datasheets/datasheet_active_buzzer_5v_english_190523.pdf
 
 - **Tactile Push Button (4-pin switch)**  
-  https://components101.com/switches/push-button
+  https://docs.arduino.cc/built-in-examples/digital/Button/
 
 - **Breadboard (830 tie-points)**  
-  https://components101.com/breadboards
+  https://busboard.com/BB830T
 
 - **Jumper Wires (Male-Male / Male-Female)**  
-  https://components101.com/wires/jumper-wires
+  https://iotzone.in/blog/jumper-wire-types-uses-pin-configuration-and-complete-guide-for-electronics-projects
 
 ---
 
 ### Software Components
 
 - **Arduino IDE**  
-  https://www.arduino.cc/en/software
+  https://www.arduino.cc/en/software/
 
 - **ESP32 Board Package (Espressif Systems)**  
-  https://github.com/espressif/arduino-esp32
+  https://docs.espressif.com/projects/arduino-esp32/en/latest/installing.html
 
 - **Adafruit GFX Library**  
   https://github.com/adafruit/Adafruit-GFX-Library
 
 - **Adafruit SSD1306 Library**  
-  https://github.com/adafruit/Adafruit_SSD1306
+  https://docs.arduino.cc/libraries/adafruit-ssd1306/
 
 - **DHT Sensor Library (Adafruit)**  
-  https://github.com/adafruit/DHT-sensor-library
+  https://www.arduinolibraries.info/libraries/dht-sensor-library
 
 - **Adafruit Unified Sensor Library**  
-  https://github.com/adafruit/Adafruit_Sensor
+  https://docs.arduino.cc/libraries/adafruit-unified-sensor/
 
 ---
 
@@ -100,25 +96,28 @@ To set up the project, follow the steps below:
 
 ### 3. Hardware Connections
 
-- **DHT11**
-- VCC → 3.3V  
-- GND → GND  
-- DATA → GPIO 2  
+### ⚡ Power Rails
+- ESP32 3.3V -> Breadboard + rail
+- ESP32 GND -> Breadboard - rail
 
-- **OLED Display**
-- VCC → 3.3V  
-- GND → GND  
-- SDA → GPIO 21  
-- SCL → GPIO 22  
+### 🌡️ DHT11 Temperature & Humidity Sensor
+- VCC -> + rail
+- GND -> - rail
+- DATA -> GPIO 4
 
-- **Buzzer**
-- VCC → 3.3V  
-- GND → GND  
-- SIG → GPIO 23  
+### 🔔 Buzzer
+- GND -> - rail
+- SIG -> GPIO 5
 
-- **Push Button**
-- One pin → GND  
-- Opposite (diagonal) pin → GPIO 5  
+### 🖥️ OLED Display (I2C)
+- VCC -> ESP32 3.3V
+- GND -> ESP32 GND
+- SDA -> GPIO 21
+- SCL -> GPIO 22
+
+### 🔘 Button
+- Pin 1 -> ESP32 GND
+- Opposite diagonal pin -> GPIO 23
 
 ---
 
